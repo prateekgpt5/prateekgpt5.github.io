@@ -53,6 +53,24 @@
 				'Close chat.': 'Click to close',
 			},*/
 		});
+	function performSignIn() {
+	    let headers = new Headers();
+	    headers.append('GET', 'POST', 'OPTIONS');
+	    headers.append('Content-Type', 'application/json');
+	    headers.append('Accept', 'application/json');
+	    headers.append('Authorization', 'Basic ' + base64.encode("admin" + ":" +  "PJe03!xrcF%S"));
+	    headers.append('Origin','https://prateekgpt5.github.io/');
+	
+	    fetch("https://dev294826.service-now.com/", {
+		mode: 'cors',
+		credentials: 'include',
+		method: 'POST',
+		headers: headers
+	    })
+	    .then(response => response.json())
+	    .then(json => console.log(json))
+	    .catch(error => console.log('Authorization failed: ' + error.message));
+	}
 </script>
 	
 <!--[if lt IE 9]>
