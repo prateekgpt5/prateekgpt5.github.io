@@ -27,7 +27,8 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" href="css/custom.css">
 <script src="js/modernizr.js"></script> <!-- Modernizr -->
-<script src="https://dev294826.service-now.com/scripts/now-requestor-chat-popover-app/now-requestor-chat-popover-app.min.js?sysparm_substitute=false"></script>
+<!--<script src="https://dev294826.service-now.com/scripts/now-requestor-chat-popover-app/now-requestor-chat-popover-app.min.js?sysparm_substitute=false"></script>-->
+	
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -409,8 +410,9 @@
     <!-- ALL PLUGINS -->
     <script src="js/custom.js"></script>
     <script src="js/jquery.vide.js"></script>
-    <script>
-		const chat = new ServiceNowChat({
+    <script type="module" >
+      import ServiceNowChat from "https://dev294826.service-now.com/uxasset/externals/now-requestor-chat-popover-app/index.jsdbx?sysparm_substitute=false";
+		var chat = new ServiceNowChat({
 			instance: 'https://dev294826.service-now.com',
 			context: {
 				skip_load_history: 1
