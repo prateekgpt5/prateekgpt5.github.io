@@ -28,12 +28,12 @@
 <link rel="stylesheet" href="css/custom.css">
 <script src="js/modernizr.js"></script> <!-- Modernizr -->
 <!--<script src="https://dev294826.service-now.com/scripts/now-requestor-chat-popover-app/now-requestor-chat-popover-app.min.js?sysparm_substitute=false"></script>-->
-<!--<script type="module">
+<script type="module">
       import ServiceNowChat from "https://dev294826.service-now.com/uxasset/externals/now-requestor-chat-popover-app/index.jsdbx?sysparm_substitute=false";
 		var chat = new ServiceNowChat({
 			instance: 'https://dev294826.service-now.com',
 		});
-</script>-->
+</script>
 	
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -43,24 +43,7 @@
 </head>
 
 <body id="page-top" class="politics_version">
-    <script>
-    window.postMessage("https://dev294826.service-now.com/sn_va_web_client_login.do?sysparm_redirect_uri=" + "https://prateekgpt5.github.io/");
-    window.addEventListener("message", function(e) {
-       // redirect to SSO login if the web client logs in but is logged in as a guest user(unauthenticated)
-      if(e.data.type==="SESSION_CREATED" && e.data.authenticated === false)
-        window.location.href = "https://dev294826.service-now.com/sn_va_web_client_login.do?sysparm_redirect_uri="+ encodeURIComponent(location.href);
-      
-      // redirect to SSO login if the ServiceNow platform logs out from underneath the web client
-      if(e.data.type==="SESSION_LOGGED_OUT")
-        window.location.href = "https://dev294826.service-now.com/sn_va_web_client_login.do?sysparm_redirect_uri=" + encodeURIComponent(location.href);
-    });
-  </script>
     <!-- LOADER -->
-    <iframe id="sn_va_web_client"
-    title="ServiceNow Virtual Agent Client"
-    width="600"
-    height="900"
-    src="https://prateekgpt5.github.io/sn_va_web_client_app_embed.do">Test</iframe>
     <div id="preloader">
         <div id="main-ld">
             <div id="loader"></div>
