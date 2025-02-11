@@ -27,7 +27,7 @@
 <!-- Custom CSS -->
 <link rel="stylesheet" href="css/custom.css">
 <script src="js/modernizr.js"></script> <!-- Modernizr -->
-
+<script src="https://site1.mycompany.com/scripts/now-requestor-chat-popover-app/now-requestor-chat-popover-app.min.js?sysparm_substitute=false"></script>
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -36,7 +36,31 @@
 </head>
 
 <body id="page-top" class="politics_version">
-
+	<script>
+		const chat = new ServiceNowChat({
+			instance: 'https://dev294826.service-now.com',
+			context: {
+				skip_load_history: 1
+			},
+			branding: {
+				bgColor: '#333',
+				primaryColor: '#000',
+				hoverColor: '#EFEFEF',
+				activeColor: '#AAA',
+				openIcon: 'custom-open.svg',
+				closeIcon: 'custom-close.svg',
+				sizeMultiplier: 1.6
+			},
+			offsetX: 50,
+			offsetY: 50,
+			position: 'left',
+			translations: {
+				'Open dialog': 'Open chat',
+				'Open Chat. {0} unread message(s)': 'Click to open',
+				'Close chat.': 'Click to close',
+			},
+		});
+	</script>
     <!-- LOADER -->
     <div id="preloader">
         <div id="main-ld">
